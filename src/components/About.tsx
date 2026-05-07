@@ -1,10 +1,10 @@
-import { User, Briefcase, Globe, Award } from 'lucide-react';
+import { TrendingUp, Briefcase, Globe, Award } from 'lucide-react';
 
 const stats = [
-  { icon: Briefcase, label: 'Years Experience', value: '3+' },
-  { icon: Globe, label: 'Industries Served', value: '5+' },
-  { icon: Award, label: 'Projects Delivered', value: '15+' },
-  { icon: User, label: 'Teams Led', value: 'Cross-func.' },
+  { icon: Briefcase, label: 'Years Experience', value: '4+' },
+  { icon: Globe, label: 'Industries', value: '3+' },
+  { icon: TrendingUp, label: 'Revenue Saved', value: '$1.2M' },
+  { icon: Award, label: 'Forecast Accuracy', value: '94%' },
 ];
 
 export default function About() {
@@ -15,26 +15,28 @@ export default function About() {
           <div className="flex-1">
             <p className="text-sky-400 text-sm font-medium tracking-widest uppercase mb-3">About Me</p>
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
-              Crafting Digital<br />
-              <span className="text-gradient">Experiences</span>
+              Turning Data Into<br />
+              <span className="text-gradient">Business Impact</span>
             </h2>
             <p className="text-gray-400 leading-relaxed mb-5">
-              I'm an experienced Full Stack Developer with 3+ years of hands-on experience designing,
-              developing, and deploying scalable web applications. I work across the entire stack —
-              from pixel-perfect React frontends to robust Node.js backends and PostgreSQL databases.
+              I'm a results-driven Senior Data Analyst with 4+ years of experience delivering scalable
+              analytics solutions across SaaS, networking, and enterprise technology domains. I specialise
+              in data modeling, predictive analytics, and CRM intelligence.
             </p>
             <p className="text-gray-400 leading-relaxed mb-5">
-              Throughout my career at <span className="text-sky-400 font-medium">eArbor LLP</span>, I've delivered
-              projects spanning E-Commerce, Logistics, Rental Services, HR Tech, and Music industries —
-              always within deadlines and to client satisfaction.
+              My career spans industry leaders — <span className="text-sky-400 font-medium">IBM</span>,{' '}
+              <span className="text-sky-400 font-medium">Cisco</span>, and{' '}
+              <span className="text-sky-400 font-medium">Zoho Corporation</span> — where I've partnered
+              with product, sales, and marketing teams to optimise customer lifecycles, revenue forecasting,
+              and retention strategies.
             </p>
             <p className="text-gray-400 leading-relaxed mb-8">
-              I'm passionate about writing clean, maintainable code, mentoring junior developers,
-              and aligning technical strategies with business objectives to deliver impactful, user-centric solutions.
+              I'm passionate about building modern data pipelines, implementing data governance frameworks,
+              and enabling self-service BI ecosystems that empower organisations to make faster, smarter decisions.
             </p>
 
             <div className="flex flex-wrap gap-3">
-              {['React.js', 'TypeScript', 'Node.js', 'PostgreSQL', 'RESTful APIs', 'Docker'].map((tech) => (
+              {['SQL', 'Python', 'Power BI', 'Tableau', 'AWS', 'Azure', 'Snowflake'].map((tech) => (
                 <span
                   key={tech}
                   className="px-3 py-1.5 rounded-lg bg-gray-800 border border-gray-700 text-sm text-gray-300 hover:border-sky-500/50 hover:text-sky-300 transition-colors"

@@ -1,29 +1,41 @@
-import { Monitor, Server, Database, Wrench } from 'lucide-react';
+import { Code2, BarChart2, Cloud, Database, Wrench, TrendingUp } from 'lucide-react';
 
 const skillCategories = [
   {
-    icon: Monitor,
-    title: 'Frontend',
+    icon: Code2,
+    title: 'Programming & Querying',
     color: 'sky',
-    skills: ['React', 'TypeScript', 'JavaScript (ES6+)', 'Next.js', 'Redux Toolkit', 'TailwindCSS', 'Ant Design', 'HTML5 / CSS3', 'Bootstrap', 'jQuery'],
+    skills: ['SQL (Advanced)', 'CTEs', 'Window Functions', 'Stored Procedures', 'Python', 'Pandas', 'NumPy', 'Scikit-learn', 'R'],
   },
   {
-    icon: Server,
-    title: 'Backend',
+    icon: BarChart2,
+    title: 'Data Visualization & BI',
     color: 'emerald',
-    skills: ['Node.js', 'Express.js', '.NET', 'RESTful APIs', 'GraphQL'],
+    skills: ['Power BI', 'Tableau', 'Looker', 'Excel (Power Query)', 'Pivot Tables', 'IBM Cognos'],
   },
   {
-    icon: Database,
-    title: 'Databases',
-    color: 'amber',
-    skills: ['PostgreSQL', 'MySQL'],
+    icon: Cloud,
+    title: 'Cloud & Big Data',
+    color: 'teal',
+    skills: ['AWS S3', 'AWS Redshift', 'AWS Glue', 'AWS Lambda', 'Azure Data Factory', 'Azure Synapse', 'Google BigQuery', 'Snowflake', 'Apache Spark'],
   },
   {
     icon: Wrench,
-    title: 'Tools & Other',
+    title: 'CRM & Business Systems',
+    color: 'amber',
+    skills: ['Salesforce', 'Zoho CRM', 'HubSpot', 'ServiceNow', 'Jira', 'Confluence'],
+  },
+  {
+    icon: Database,
+    title: 'Data Engineering',
     color: 'rose',
-    skills: ['Git', 'Docker', 'Jenkins', 'Postman', 'Vite', 'RBAC', 'Axios', 'Web Audio API', 'Agile/Scrum', 'Cloud Integration'],
+    skills: ['ETL Pipelines', 'Data Modeling', 'Data Warehousing', 'Data Governance', 'Data Quality'],
+  },
+  {
+    icon: TrendingUp,
+    title: 'Analytics & Techniques',
+    color: 'cyan',
+    skills: ['Predictive Modeling', 'Machine Learning', 'A/B Testing', 'Time Series Forecasting', 'Statistical Analysis', 'RevOps', 'Customer Analytics'],
   },
 ];
 
@@ -42,6 +54,13 @@ const colorMap: Record<string, { bg: string; border: string; text: string; icon:
     icon: 'text-emerald-400',
     badge: 'bg-emerald-500/10 border-emerald-500/20 text-emerald-300',
   },
+  teal: {
+    bg: 'bg-teal-500/10',
+    border: 'border-teal-500/20',
+    text: 'text-teal-400',
+    icon: 'text-teal-400',
+    badge: 'bg-teal-500/10 border-teal-500/20 text-teal-300',
+  },
   amber: {
     bg: 'bg-amber-500/10',
     border: 'border-amber-500/20',
@@ -56,6 +75,13 @@ const colorMap: Record<string, { bg: string; border: string; text: string; icon:
     icon: 'text-rose-400',
     badge: 'bg-rose-500/10 border-rose-500/20 text-rose-300',
   },
+  cyan: {
+    bg: 'bg-cyan-500/10',
+    border: 'border-cyan-500/20',
+    text: 'text-cyan-400',
+    icon: 'text-cyan-400',
+    badge: 'bg-cyan-500/10 border-cyan-500/20 text-cyan-300',
+  },
 };
 
 export default function Skills() {
@@ -68,11 +94,11 @@ export default function Skills() {
             My <span className="text-gradient">Toolkit</span>
           </h2>
           <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-            A comprehensive set of technologies I use to build end-to-end solutions.
+            A comprehensive skill set spanning analytics, engineering, and business intelligence.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map(({ icon: Icon, title, color, skills }) => {
             const c = colorMap[color];
             return (

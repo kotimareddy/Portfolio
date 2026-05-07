@@ -1,84 +1,88 @@
 import { useState } from 'react';
-import { ExternalLink, ChevronDown, ChevronUp } from 'lucide-react';
+import { ChevronDown, ChevronUp, TrendingUp } from 'lucide-react';
 
 const projects = [
   {
-    title: 'HRMS – Driver Recruitment Management System',
-    category: 'HR Tech',
-    image: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'A driver recruitment platform handling end-to-end HR workflows — from job posting and candidate screening to onboarding and compliance tracking.',
+    title: 'Enterprise BI Dashboard Suite – IBM',
+    category: 'Enterprise Analytics',
+    image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'End-to-end Power BI dashboard ecosystem for Fortune 500 clients, transforming raw enterprise data into executive-ready intelligence.',
     highlights: [
-      'Led full stack development with Node.js/Express.js backend and React 18 + TypeScript frontend.',
-      'Implemented Role-Based Access Control (RBAC) for Admins, HR Managers, and Recruiters.',
-      'Engineered document upload, preview, and validation features with cloud integration.',
-      'Built reporting and analytics modules with interactive charts and exportable data.',
+      'Designed and deployed enterprise-grade Power BI dashboards improving executive decision-making speed by 35%.',
+      'Built scalable ETL pipelines via SQL and AWS Redshift reducing data processing time by 50%.',
+      'Implemented self-service BI solutions, cutting stakeholder reporting turnaround by 40%.',
+      'Led data governance initiatives, reducing data quality issues by 60% via anomaly detection frameworks.',
     ],
-    tech: ['React 18', 'TypeScript', 'Node.js', 'Express.js', 'Ant Design', 'RBAC', 'PostgreSQL'],
+    tech: ['Power BI', 'SQL', 'AWS Redshift', 'IBM Cloud', 'ETL', 'Data Governance'],
     color: 'sky',
+    impact: '35% faster decisions',
   },
   {
-    title: 'Warehouse Management System (WMS)',
-    category: 'Logistics',
-    image: 'https://images.pexels.com/photos/4481534/pexels-photo-4481534.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'A scalable warehouse operations platform with real-time inventory management, stock tracking, and advanced data visualization.',
+    title: 'Revenue Forecasting Engine – IBM',
+    category: 'Predictive Analytics',
+    image: 'https://images.pexels.com/photos/669615/pexels-photo-669615.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Machine learning-based revenue forecasting system achieving 94% accuracy, enabling proactive sales strategy and resource planning.',
     highlights: [
-      'Developed scalable backend APIs for inventory management, real-time stock tracking, and warehouse operations.',
-      'Built a responsive, high-performance frontend with React.js and reusable component libraries.',
-      'Designed interactive charts, real-time dashboards, and feature-rich tables with server-side pagination.',
-      'Integrated Excel import/export with validation for efficient bulk data handling.',
+      'Developed predictive analytics models using Python (Scikit-learn) to forecast revenue with 94% accuracy.',
+      'Integrated model outputs into live dashboards for real-time executive review.',
+      'Partnered with CRM and sales teams to optimise pipeline visibility and customer segmentation.',
     ],
-    tech: ['React.js', 'Node.js', 'Express.js', 'PostgreSQL', 'RBAC', 'Excel Integration'],
+    tech: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Salesforce', 'Power BI'],
     color: 'emerald',
+    impact: '94% forecast accuracy',
   },
   {
-    title: 'SBBS – Printers Rentals Management System',
-    category: 'Rental Services',
+    title: 'Network Performance Analytics – Cisco',
+    category: 'Network Analytics',
     image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'A printer rental platform covering service requests, dispatches, billing cycles, and engineer assignment with real-time API integrations.',
+    description: 'Real-time network monitoring and predictive maintenance platform processing 500K+ daily events to minimise downtime across global infrastructure.',
     highlights: [
-      'Built backend modules for automated invoicing and billing with custom cycle support.',
-      'Implemented an intuitive Kanban board for ticket management.',
-      'Created a centralized dashboard for real-time inventory, billing, and engineer activity visibility.',
+      'Built dashboards analysing 500K+ daily network events, reducing downtime by 28%.',
+      'Developed predictive maintenance models forecasting failures 48 hours in advance.',
+      'Automated Python-based reporting with ServiceNow integration, cutting reporting time by 45%.',
+      'Translated technical data into business-friendly views, boosting adoption by 70%.',
     ],
-    tech: ['React.js', 'Node.js', 'Express.js', 'PostgreSQL', 'Kanban', 'Billing Automation'],
-    color: 'amber',
-  },
-  {
-    title: 'Tealbord – Logistics Job Portal',
-    category: 'Logistics',
-    image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'A logistics-focused job portal with role-specific dashboards for Admin, HR, and Job Seekers with advanced job matching and interview scheduling.',
-    highlights: [
-      'Built with Node.js/Express backend and React.js frontend with role-specific dashboards.',
-      'Implemented advanced job matching algorithms and application tracking with real-time updates.',
-      'Integrated multi-authentication (email, LinkedIn, Google) for streamlined onboarding.',
-      'Built interview scheduling module with calendar integration.',
-    ],
-    tech: ['React.js', 'Node.js', 'Express.js', 'PostgreSQL', 'OAuth', 'Calendar Integration'],
-    color: 'rose',
-  },
-  {
-    title: 'SongBrite – Music Platform',
-    category: 'Music',
-    image: 'https://images.pexels.com/photos/1626481/pexels-photo-1626481.jpeg?auto=compress&cs=tinysrgb&w=800',
-    description: 'A feature-rich music platform with real-time audio playback, multi-track management, and a glassmorphism UI with smooth animations.',
-    highlights: [
-      'Built with React 18, TypeScript, Redux Toolkit, Ant Design, and Next.js with Web Audio API.',
-      'Developed real-time audio playback, multi-track management, and dynamic file upload with drag-and-drop.',
-      'Designed a 4-column Kanban workflow with glassmorphism UI and mobile-friendly interactions.',
-      'Implemented secure purchase and transaction handling.',
-    ],
-    tech: ['React 18', 'TypeScript', 'Next.js', 'Redux Toolkit', 'Web Audio API', 'Ant Design'],
+    tech: ['Python', 'SQL', 'Tableau', 'ServiceNow', 'Predictive Modeling', 'ETL'],
     color: 'teal',
+    impact: '$1.2M annual savings',
+  },
+  {
+    title: 'Infrastructure Cost Optimisation – Cisco',
+    category: 'Cost Analytics',
+    image: 'https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Data-driven cost analysis initiative identifying redundant infrastructure and inefficient data flows, delivering $1.2M in annual savings.',
+    highlights: [
+      'Delivered cost optimisation analytics saving $1.2M annually by identifying redundant infrastructure.',
+      'Modelled multi-region infrastructure spend patterns with advanced SQL window functions.',
+      'Presented insights to leadership, directly influencing budget allocation decisions.',
+    ],
+    tech: ['SQL', 'Python', 'AWS', 'Tableau', 'Statistical Analysis', 'Excel'],
+    color: 'amber',
+    impact: '$1.2M saved annually',
+  },
+  {
+    title: 'CRM Conversion & Churn Analytics – Zoho',
+    category: 'Customer Analytics',
+    image: 'https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800',
+    description: 'Comprehensive CRM analytics solution boosting conversion rates and reducing churn through predictive modelling and behavioural segmentation.',
+    highlights: [
+      'Improved CRM conversion rates by 18% via customer behaviour analysis and funnel optimisation.',
+      'Reduced customer churn by 15% by developing predictive churn models and retention strategies.',
+      'Conducted A/B testing and campaign analysis, improving marketing ROI by 24%.',
+      'Designed data quality frameworks achieving 99.2% data accuracy SLA.',
+    ],
+    tech: ['Python', 'SQL', 'Zoho CRM', 'Salesforce', 'A/B Testing', 'Looker'],
+    color: 'rose',
+    impact: '18% conversion lift',
   },
 ];
 
-const colorMap: Record<string, { badge: string; dot: string }> = {
-  sky: { badge: 'bg-sky-500/10 text-sky-300 border-sky-500/20', dot: 'bg-sky-400' },
-  emerald: { badge: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/20', dot: 'bg-emerald-400' },
-  amber: { badge: 'bg-amber-500/10 text-amber-300 border-amber-500/20', dot: 'bg-amber-400' },
-  rose: { badge: 'bg-rose-500/10 text-rose-300 border-rose-500/20', dot: 'bg-rose-400' },
-  teal: { badge: 'bg-teal-500/10 text-teal-300 border-teal-500/20', dot: 'bg-teal-400' },
+const colorMap: Record<string, { badge: string; dot: string; impact: string }> = {
+  sky: { badge: 'bg-sky-500/10 text-sky-300 border-sky-500/20', dot: 'bg-sky-400', impact: 'text-sky-400' },
+  emerald: { badge: 'bg-emerald-500/10 text-emerald-300 border-emerald-500/20', dot: 'bg-emerald-400', impact: 'text-emerald-400' },
+  amber: { badge: 'bg-amber-500/10 text-amber-300 border-amber-500/20', dot: 'bg-amber-400', impact: 'text-amber-400' },
+  rose: { badge: 'bg-rose-500/10 text-rose-300 border-rose-500/20', dot: 'bg-rose-400', impact: 'text-rose-400' },
+  teal: { badge: 'bg-teal-500/10 text-teal-300 border-teal-500/20', dot: 'bg-teal-400', impact: 'text-teal-400' },
 };
 
 function ProjectCard({ project }: { project: typeof projects[0] }) {
@@ -98,6 +102,10 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
           <span className={`text-xs font-medium px-2.5 py-1 rounded-full border ${c.badge}`}>
             {project.category}
           </span>
+        </div>
+        <div className="absolute bottom-4 right-4 flex items-center gap-1.5 bg-gray-950/80 backdrop-blur-sm rounded-lg px-2.5 py-1">
+          <TrendingUp size={12} className={c.impact} />
+          <span className={`text-xs font-semibold ${c.impact}`}>{project.impact}</span>
         </div>
       </div>
 
@@ -124,22 +132,16 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
           ))}
         </div>
 
-        <div className="flex items-center justify-between">
-          <button
-            onClick={() => setExpanded(!expanded)}
-            className="flex items-center gap-1.5 text-sm text-sky-400 hover:text-sky-300 transition-colors"
-          >
-            {expanded ? (
-              <>Less details <ChevronUp size={14} /></>
-            ) : (
-              <>More details <ChevronDown size={14} /></>
-            )}
-          </button>
-          <button className="flex items-center gap-1.5 text-sm text-gray-400 hover:text-white transition-colors">
-            <ExternalLink size={14} />
-            View
-          </button>
-        </div>
+        <button
+          onClick={() => setExpanded(!expanded)}
+          className="flex items-center gap-1.5 text-sm text-sky-400 hover:text-sky-300 transition-colors"
+        >
+          {expanded ? (
+            <>Less details <ChevronUp size={14} /></>
+          ) : (
+            <>More details <ChevronDown size={14} /></>
+          )}
+        </button>
       </div>
     </div>
   );
@@ -155,7 +157,7 @@ export default function Projects() {
             Key <span className="text-gradient">Projects</span>
           </h2>
           <p className="text-gray-400 mt-4 max-w-xl mx-auto">
-            A selection of production applications I've architected and delivered.
+            A selection of high-impact analytics initiatives I've led across IBM, Cisco, and Zoho.
           </p>
         </div>
 

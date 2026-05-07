@@ -110,7 +110,7 @@ export default function Hero() {
               </div>
               <div className="flex items-center gap-2 text-gray-400 text-base">
                 <Mail size={18} className="text-sky-400" />
-                mareddykotireddy1919@gmail.com
+                Ashokkumar@gmail.com
               </div>
             </div>
 

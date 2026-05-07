@@ -1,6 +1,6 @@
 {
-  "short_name": "Malavika T",
-  "name": "Malavika Tanneeru – Senior Data Analyst Portfolio",
+  "short_name": "Chandrakanth",
+  "name": "Chandrakanth Reddy Aaluri – Data Science Portfolio",
   "icons": [
     {
       "src": "favicon.png",
@@ -15,7 +15,7 @@
     {
       "src": "logo512.png",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "192x192"
     }
   ],
   "start_url": ".",
